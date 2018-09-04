@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Login from './views/Login'
+import ListEvent from './views/ListEvent'
+import EditEvents from './views/EditEvents'
+import AddEvent from './views/AddEvent'
+
+import { store } from './store/index'
 
 Vue.use(Router)
 
@@ -8,16 +13,50 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'login',
+      component: Login
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/listEvents',
+      name: 'listEvents',
+      component: ListEvent,
+      beforeEnter: (destination, source, next) => {
+        if(destination.name === 'listEvents')
+          if(!store.state.user.authToken)
+            next(false)
+          else
+            next()
+        else
+          next()
+      }
+    },
+    {
+      path: '/editEvent/:id',
+      name: 'editEvent',
+      component: EditEvents,
+      beforeEnter: (destination, source, next) => {
+        if(destination.name === 'listEvents')
+          if(!store.state.user.authToken)
+            next(false)
+          else
+            next()
+        else
+          next()
+      }
+    },
+    {
+      path: '/addEvent',
+      name: 'addEvent',
+      component: AddEvent,
+      beforeEnter: (destination, source, next) => {
+        if(destination.name === 'listEvents')
+          if(!store.state.user.authToken)
+            next(false)
+          else
+            next()
+        else
+          next()
+      }
     }
   ]
 })
