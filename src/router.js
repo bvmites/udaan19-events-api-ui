@@ -22,10 +22,12 @@ export default new Router({
       component: ListEvent,
       beforeEnter: (destination, source, next) => {
         if(destination.name === 'listEvents')
-          if(!store.state.user.authToken)
-            next(false)
-          else
+          if(localStorage.user){
+            store.state.user = JSON.parse(localStorage.getItem('user'))
             next()
+          }
+          else
+            next(false)
         else
           next()
       }
@@ -35,11 +37,13 @@ export default new Router({
       name: 'editEvent',
       component: EditEvents,
       beforeEnter: (destination, source, next) => {
-        if(destination.name === 'listEvents')
-          if(!store.state.user.authToken)
-            next(false)
-          else
+        if(destination.name === 'editEvent')
+          if(localStorage.user){
+            store.state.user = JSON.parse(localStorage.getItem('user'))
             next()
+          }
+          else
+            next(false)
         else
           next()
       }
@@ -49,11 +53,13 @@ export default new Router({
       name: 'addEvent',
       component: AddEvent,
       beforeEnter: (destination, source, next) => {
-        if(destination.name === 'listEvents')
-          if(!store.state.user.authToken)
-            next(false)
-          else
+        if(destination.name === 'addEvent')
+          if(localStorage.user){
+            store.state.user = JSON.parse(localStorage.getItem('user'))
             next()
+          }
+          else
+            next(false)
         else
           next()
       }

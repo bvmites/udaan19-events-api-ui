@@ -31,7 +31,7 @@ export default {
           Authorization: this.user.authToken
         }
       }).then(function(response) {
-        console.log(response)
+        this.$router.push('listEvents')
       })
     }
   },
@@ -48,7 +48,7 @@ export default {
       }
     }).then(function(response) {
       this.event = response.body
-      console.log(this.event)
+      console.log(response.body)
     })
   }
 }

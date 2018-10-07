@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="md" type="dark">
-      <b-navbar-brand href="#" to="/">Genesis logo</b-navbar-brand>
+      <b-navbar-brand href="#" to="/listEvents">Genesis logo</b-navbar-brand>
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
       <b-collapse is-nav id="nav_collapse">

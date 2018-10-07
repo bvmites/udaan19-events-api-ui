@@ -39,8 +39,12 @@
             number: this.password,
             authToken: response.body.token
           })
+          this.$router.push('/listEvents')
         })
-
+      }
+    },
+    mounted() {
+      if(localStorage.user){
         this.$router.push('/listEvents')
       }
     }

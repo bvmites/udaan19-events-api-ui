@@ -49,6 +49,7 @@ export default {
         }
       }).then(function(response) {
         console.log(response)
+        this.$router.push('listEvents')
       })
     }
   }
