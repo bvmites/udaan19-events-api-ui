@@ -1,6 +1,5 @@
 <template>
   <div>
-    <navbarComponent/>
     <div class="container">
       <inputComponent :event="event" @updateEvent="sendEvent($event)"/>
     </div>
@@ -8,14 +7,12 @@
 </template>
 
 <script>
-import navbarComponent from '../components/navbarComponent'
 import inputComponent from '../components/inputComponent'
 import {mapState} from 'vuex'
 
 export default {
   name: 'AddEvent',
   components: {
-    navbarComponent,
     inputComponent
   },
   data() {

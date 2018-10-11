@@ -1,31 +1,29 @@
 <template>
   <div>
-    <navbarComponent/>
     <div class="container-fluid">
-      <div class="heading">Events</div>
-      <b-card v-for="event in events">
-        <div class="body">
-          {{event.eventName}}
-        </div>
-        <div class="action-buttons">
-          <hr>
-          <button class="btn" @click="editEvent(event._id)"><font-awesome-icon icon="pen" /></button>
-          <button class="btn" @click="deleteEvent(event._id)"><font-awesome-icon icon="trash" /></button>
-        </div>
-      </b-card>
+      <div v-if="events.length === 0" class="heading">There are no events to show</div>
+      <div v-if="events.length > 0">
+        <div class="heading">Events</div>
+        <b-card v-for="event in events">
+          <div class="body">
+            {{event.eventName}}
+          </div>
+          <div class="action-buttons">
+            <hr>
+            <button class="btn" @click="editEvent(event._id)"><font-awesome-icon icon="pen" /></button>
+            <button class="btn" @click="deleteEvent(event._id)"><font-awesome-icon icon="trash" /></button>
+          </div>
+        </b-card>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import navbarComponent from '../components/navbarComponent'
 import {mapState} from 'vuex'
 
 export default {
   name: 'ListEvent',
-  components: {
-    navbarComponent
-  },
   data() {
     return {
       events: null
@@ -57,7 +55,9 @@ export default {
         Authorization: this.user.authToken
       }
     }).then(function(response) {
-      this.events = response.body
+      console.log(response.body)
+      if(response.body !== [])
+        this.events = response.body
     })
   }
 }

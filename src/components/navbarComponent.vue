@@ -5,7 +5,7 @@
         <img src="../assets/logo.png" alt="genesis logo">
         <span class="brand-title">Genesis 18</span>
       </b-navbar-brand>
-      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+      <b-navbar-toggle v-if="user.authToken" target="nav_collapse"></b-navbar-toggle>
 
       <b-collapse is-nav id="nav_collapse">
         <!-- Right aligned nav items -->

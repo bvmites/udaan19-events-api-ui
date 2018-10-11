@@ -1,6 +1,5 @@
 <template>
   <div>
-    <navbarComponent></navbarComponent>
     <div class="heading-text">
       <span>login</span>
     </div>
@@ -22,12 +21,8 @@
 </template>
 
 <script>
-  import navbarComponent from '../components/navbarComponent'
   export default {
     name: 'Login',
-    components: {
-      navbarComponent
-    },
     data() {
       return {
         id: null,
