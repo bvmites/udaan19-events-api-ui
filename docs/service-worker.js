@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.6f070594926ed0e4bbb9f89ae6479244.js"
+  "/precache-manifest.52368741e9876f448c120474b746a4e0.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "genesis18-event-registeration"});
