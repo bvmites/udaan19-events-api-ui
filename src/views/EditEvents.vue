@@ -26,12 +26,12 @@ export default {
   methods: {
     sendEvent(event) {
       this.event = event
-      this.$http.post('https://nameless-retreat-73671.herokuapp.com/events', this.event, {
+      this.$http.put('https://nameless-retreat-73671.herokuapp.com/events', this.event, {
         headers: {
           Authorization: this.user.authToken
         }
       }).then(function(response) {
-        this.$router.push('listEvents')
+        this.$router.push('/listEvents')
       })
     }
   },

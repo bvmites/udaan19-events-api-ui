@@ -1,7 +1,10 @@
 <template>
   <div>
     <b-navbar toggleable="md" type="dark">
-      <b-navbar-brand href="#" to="/listEvents">Genesis logo</b-navbar-brand>
+      <b-navbar-brand href="#" to="/listEvents">
+        <img src="../assets/logo.png" alt="genesis logo">
+        <span class="brand-title">Genesis 18</span>
+      </b-navbar-brand>
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
       <b-collapse is-nav id="nav_collapse">
@@ -48,10 +51,9 @@
 </script>
 
 <style scoped lang="sass">
-.navbar-dark
-  background: #2D3142
-  color: #FFFFFB
-  box-shadow: 0 5px 5px #333333
-  a
-    color: #FFFFFB
+
+@import '../sass/variables'
+@import '../sass/navbar'
+
+
 </style>

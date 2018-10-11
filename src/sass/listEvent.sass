@@ -1,0 +1,38 @@
+.card
+  margin: 10px
+  min-width: 250px
+  max-width: 300px
+  display: inline-block
+  box-shadow: 1px 1px 5px 3px #454545
+
+  .body
+    font-size: 1.6em
+    text-transform: uppercase
+    font-weight: bold
+    text-align: center
+  .action-buttons
+    button
+      margin: 0
+      background: transparent
+      font-size: 25px
+      color: $primaryColor
+      border: none
+      outline: 0
+      box-shadow: none
+
+    button:active
+      border-color: transparent
+
+    button:hover
+      color: $secondaryColor
+
+    button:nth-of-type(1)
+      float: left
+
+    button:nth-of-type(2)
+      float: right
+
+.container-fluid
+  margin-top: 2%
+  padding-bottom: 5%
+  text-align: center

@@ -7,10 +7,14 @@
 
 <style lang="sass">
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web|Play')
+@font-face
+  font-family: 'Neptune'
+  src: url('./assets/Neptune_Trial.otf') format('opentype')
+@import './sass/variables'
 
 body
-  background: #4F5D75
-  font-family: 'Titillium Web', sans-serif
+  background: $primaryColor
+  font-family: $primaryFont
 
 .heading
   text-align: center
@@ -18,7 +22,7 @@ body
   color: #FFFFFF
   font-weight: bold
   text-transform: uppercase
-  font-family: 'Play', sans-serif
+  font-family: $headingFont
 
 .discription
   text-align: justify

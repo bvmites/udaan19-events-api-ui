@@ -1,16 +1,22 @@
 <template>
   <div>
     <navbarComponent></navbarComponent>
+    <div class="heading-text">
+      <span>login</span>
+    </div>
     <div class="container login">
-      <div class="login">
+      <div>
         <b-input-group size="lg">
           <b-form-input placeholder="Name" v-model="id"></b-form-input>
         </b-input-group>
         <b-input-group size="lg">
-          <b-form-input placeholder="password" v-model="password" type="password" min-length="3"></b-form-input>
+          <b-form-input placeholder="password" v-model="password" type="password" min-length="3" @keyup.enter.native="login"></b-form-input>
         </b-input-group>
       </div>
       <button class="btn mx-auto" @click="login">Login</button>
+      <div v-if="errorMessage" class="heading">
+        {{errorMessage}}
+      </div>
     </div>
   </div>
 </template>
@@ -25,7 +31,8 @@
     data() {
       return {
         id: null,
-        password: null
+        password: null,
+        errorMessage: null
       }
     },
     methods: {
@@ -40,6 +47,8 @@
             authToken: response.body.token
           })
           this.$router.push('/listEvents')
+        }).catch(function(error) {
+          this.errorMessage = error.body.message
         })
       }
     },
@@ -53,7 +62,24 @@
 
 <style scoped lang="sass">
 @import "../sass/input"
-.login
-  margin-top: 20%
+@import '../sass/variables'
 
+.login
+  padding-top: 12%
+  padding-bottom: 10%
+  background: url("../assets/logo.png") no-repeat center
+  background-size: contain
+
+.heading
+  font-size: 30px
+
+.heading-text
+  font-family: Neptune, sans-serif
+  text-align: center
+  font-size: 45px
+  margin-top: 20px
+  span
+    background: linear-gradient(to right, #E26135 0%, #C61B2B 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
 </style>

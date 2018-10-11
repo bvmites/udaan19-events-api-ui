@@ -37,7 +37,8 @@
         <b-form-input v-model="manager.name" placeholder="Manager Name"> </b-form-input>
       </b-input-group>
       <b-input-group size="lg">
-        <b-form-input v-model="manager.phone" placeholder="Manager Number"> </b-form-input>
+        <b-form-input v-model="manager.phone" placeholder="Manager Number" @keyup.enter.native="addManager">
+        </b-form-input>
       </b-input-group>
       <button class="btn ml-auto" @click="addManager">Add Manager</button>
     </div>
@@ -55,11 +56,14 @@
         </div>
       </b-card>
       <b-input-group size="lg">
-        <b-form-input v-model="round" placeholder="Round Description"></b-form-input>
+        <b-form-input v-model="round" placeholder="Round Description" @keyup.enter.native="addRound"></b-form-input>
       </b-input-group>
       <button class="btn ml-auto" @click="addRound">Add Round</button>
     </div>
-    <button class="btn mx-auto" @click="submit">Submit</button>
+    <div class="action-buttons">
+      <button class="btn" @click="submit">Submit</button>
+      <button class="btn btn-warning" @click="$router.push('/')">Cancel</button>
+    </div>
   </div>
 </template>
 
@@ -122,6 +126,19 @@ export default {
 
 <style scoped lang="sass">
 @import '../sass/input'
+@import '../sass/variables'
+.action-buttons
+  text-align: center
+
+  .btn
+    display: inline-block
+    margin-left: 20px
+    border: none
+
+
+
+.btn-warning
+  background-color: darken($secondaryColor, 20%)
 
 .sub
   margin-top: 20px
