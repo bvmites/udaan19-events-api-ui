@@ -80,6 +80,8 @@
   margin-top: 20px
   span
     background: linear-gradient(to right, #E26135 0%, #C61B2B 100%)
+    background: -moz-linear-gradient(to right, #E26135 0%, #C61B2B 100%)
+    background: -webkit-linear-gradient(to right, #E26135 0%, #C61B2B 100%)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
 </style>
