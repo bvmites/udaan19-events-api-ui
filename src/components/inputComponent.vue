@@ -93,7 +93,8 @@ export default {
         { value: 'non-tech' , text: "Non Tech"},
         { value: 'ssip' , text: "SSIP"},
         { value: 'cpit' , text: "CP/IT"},
-        { value: 'prod' , text: "Production"}
+        { value: 'prod' , text: "Production"},
+        { value: 'civil', text: "Civil"}
       ]
     }
   },
