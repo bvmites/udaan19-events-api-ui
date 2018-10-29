@@ -1,16 +1,23 @@
-# genesis18-event-registeration
+# Genesis18 Events API UI
 
-## Project setup
-```
-npm install
-```
+### Dependencies
+1. bootstrap-vue
+2. vue-resource
+3. vue-router
+4. vuex
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Flow
+1. Login to access the API
+2. Sends a GET request to get all the events registered
+3. Add events by filling all the details
+4. Edit event by editing the details
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Components
+1. Navbar Component - self explanatory
+2. Input Component - a form for taking input while adding an event or editing the event
+
+### Views
+1. AddEvent - A view which contains input component. User will enter the details and on submitting, event will be added to databse
+2. EditEvents - A view which renders data of the event into the input component, based on eventId
+3. ListEvent - A view which lists all the events present in the database
+4. Login - self explanatory
