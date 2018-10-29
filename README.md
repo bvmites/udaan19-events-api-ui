@@ -1,5 +1,8 @@
 # Genesis18 Events API UI
 
+### Description
+An user interface for adding or editing events of the Genesis18 techfest.
+
 ### Dependencies
 1. bootstrap-vue
 2. vue-resource
