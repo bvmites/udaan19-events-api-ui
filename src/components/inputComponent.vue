@@ -18,6 +18,9 @@
     <b-input-group size="lg">
       <b-form-input v-model="event.teamSize" placeholder="Team Size"> </b-form-input>
     </b-input-group>
+    <b-input-group size="lg">
+      <b-form-textarea v-model="event.notes" placeholder="Additional Notes" :rows="3"></b-form-textarea>
+    </b-input-group>
     <!--Managers-->
     <div class="managers">
       <div class="sub heading">Managers</div>
@@ -82,8 +85,7 @@ export default {
       typeOptions: [
         { value: null, text: "Select Event Type" },
         { value: 'tech', text: "Tech" },
-        { value: 'non-tech', text: "Non-Tech" },
-        { value: 'ssip', text: "SSIP" }
+        { value: 'non-tech', text: "Non-Tech" }
       ],
       departmentOptions: [
         { value: null, text: "Select Department"},
@@ -91,7 +93,6 @@ export default {
         { value: 'mech' , text: "Mechanical"},
         { value: 'ee' , text: "Electrical"},
         { value: 'non-tech' , text: "Non Tech"},
-        { value: 'ssip' , text: "SSIP"},
         { value: 'cpit' , text: "CP/IT"},
         { value: 'prod' , text: "Production"},
         { value: 'civil', text: "Civil"}

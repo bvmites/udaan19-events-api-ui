@@ -27,7 +27,8 @@ export default {
         managers: [],
         rounds: [],
         tagline: null,
-        teamSize: null
+        teamSize: null,
+        notes: null
       }
     }
   },

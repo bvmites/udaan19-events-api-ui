@@ -3,7 +3,7 @@
     <b-navbar toggleable="md" type="dark">
       <b-navbar-brand href="#" to="/listEvents">
         <img src="../assets/logo.png" alt="genesis logo">
-        <span class="brand-title">Genesis 18</span>
+        <span class="brand-title">udaan 19</span>
       </b-navbar-brand>
       <b-navbar-toggle v-if="user.authToken" target="nav_collapse"></b-navbar-toggle>
 
