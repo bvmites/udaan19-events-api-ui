@@ -62,16 +62,14 @@
 .login
   padding-top: 12%
   padding-bottom: 10%
-  background: url("../assets/logo.png") no-repeat center
-  background-size: contain
 
 .heading
   font-size: 30px
 
 .heading-text
-  font-family: Neptune, sans-serif
   text-align: center
   font-size: 45px
+  text-transform: uppercase
   margin-top: 20px
   span
     @include textGrad
