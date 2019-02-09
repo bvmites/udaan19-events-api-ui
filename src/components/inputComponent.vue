@@ -89,13 +89,13 @@ export default {
       ],
       departmentOptions: [
         { value: null, text: "Select Department"},
-        { value: 'ecel' , text: "EC/EL"},
-        { value: 'mech' , text: "Mechanical"},
-        { value: 'ee' , text: "Electrical"},
-        { value: 'non-tech' , text: "Non Tech"},
-        { value: 'cpit' , text: "CP/IT"},
-        { value: 'prod' , text: "Production"},
-        { value: 'civil', text: "Civil"}
+        { value: 'ecel' , text: "Half-Wave Prince"},
+        { value: 'mechProd' , text: "Automotive Philosophers"},
+        { value: 'ee' , text: "Order Of Ohms"},
+        { value: 'non-tech' , text: "Scamender's suitcase"},
+        { value: 'cpit' , text: "Chamber Of Coders"},
+        { value: 'cultural' , text: "M.A.D. Hollows"},
+        { value: 'civil', text: "Builders Of Azkaban"}
       ]
     }
   },

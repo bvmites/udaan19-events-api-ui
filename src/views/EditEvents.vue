@@ -23,7 +23,7 @@ export default {
   methods: {
     sendEvent(event) {
       this.event = event
-      this.$http.put('https://nameless-retreat-73671.herokuapp.com/events', this.event, {
+      this.$http.put('https://udaan19-events-api.herokuapp.com/events', this.event, {
         headers: {
           Authorization: this.user.authToken
         }
@@ -39,7 +39,7 @@ export default {
   },
   mounted() {
     let id = this.$route.params.id
-    this.$http.get('https://nameless-retreat-73671.herokuapp.com/events/' + id, {
+    this.$http.get('https://udaan19-events-api.herokuapp.com/events/' + id, {
       headers: {
         Authorization: this.user.authToken
       }

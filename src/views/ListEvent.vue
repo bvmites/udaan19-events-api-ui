@@ -34,7 +34,7 @@ export default {
       this.$router.push('/editEvent/' + id)
     },
     deleteEvent(id) {
-      this.$http.delete('https://nameless-retreat-73671.herokuapp.com/events/' + id, {
+      this.$http.delete('https://udaan19-events-api.herokuapp.com/events/' + id, {
         headers: {
           Authorization: this.user.authToken
         }
@@ -50,7 +50,7 @@ export default {
      })
   },
   mounted() {
-    this.$http.get('https://nameless-retreat-73671.herokuapp.com/events', {
+    this.$http.get('https://udaan19-events-api.herokuapp.com/events', {
       headers: {
         Authorization: this.user.authToken
       }

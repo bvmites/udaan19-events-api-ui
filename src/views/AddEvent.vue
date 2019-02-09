@@ -41,7 +41,7 @@ export default {
     sendEvent(event) {
       this.event = event
       console.log(this.event)
-      this.$http.post('https://nameless-retreat-73671.herokuapp.com/events', this.event, {
+      this.$http.post('https://udaan19-events-api.herokuapp.com/events', this.event, {
         headers: {
           Authorization: this.user.authToken
         }

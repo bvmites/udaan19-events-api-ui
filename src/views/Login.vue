@@ -32,7 +32,7 @@
     },
     methods: {
       login() {
-        this.$http.post('https://nameless-retreat-73671.herokuapp.com/users/login', {
+        this.$http.post('https://udaan19-events-api.herokuapp.com/users/login', {
           username: this.id,
           password: this.password
         }).then(function(response) {
