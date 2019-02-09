@@ -71,6 +71,5 @@
   font-size: 45px
   text-transform: uppercase
   margin-top: 20px
-  span
-    @include textGrad
+  color: White
 </style>
